@@ -3,116 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stefan Stefanowicz - Szalony Minimalizm</title>
+    <title>Agnieszka Giegiel - Portfolio</title>
     <style>
-        /* Szalone kolory i reset marginesów */
+        /* Reset ustawień i przygotowanie tła */
         body {
             margin: 0;
-            padding: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #ccff00; /* Jaskrawa limonka */
-            color: #000000;
+            padding: 20px; /* Margines od krawędzi ekranu */
+            background-color: #ffffff; /* Biała obwódka na zewnątrz ramy */
+            min-height: 100vh;
+            box-sizing: border-box;
+            /* Używamy eleganckiej czcionki szeryfowej */
+            font-family: 'Playfair Display', 'Georgia', serif; 
+            color: #2c2c2c;
+        }
+
+        /* Elegancka rama na całej stronie */
+        .border-frame {
+            border: 1px solid #B5A898; /* Subtelny, ciepły szary/beż dla obramowania */
+            background-color: #FAF8F5; /* Jasnokremowe tło wewnątrz */
+            height: calc(100vh - 40px);
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Nagłówek - Fuksja */
-        header {
-            background-color: #ff00ff; 
-            color: #ffffff;
-            padding: 25px;
+            justify-content: space-between; /* Rozsuwa elementy na górę/środek/dół */
+            align-items: center;
+            padding: 60px 20px 40px 20px;
+            box-sizing: border-box;
             text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            border-bottom: 5px solid #000;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        /* Główna zawartość - wyśrodkowana */
-        main {
-            flex: 1;
+        /* Kontener na imię i cytat na środku */
+        .center-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            padding: 20px;
+            flex-grow: 1; /* Wypełnia przestrzeń wypychając zdjęcie w dół */
         }
 
-        /* Emotikon na środku */
-        .emoji {
-            font-size: 120px;
-            margin: 20px 0;
-            text-shadow: 8px 8px 0px #00ffff; /* Cyjanowy cień */
-            animation: pulse 2s infinite; /* Delikatna animacja dla podbicia szaleństwa */
+        /* Imię i nazwisko */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: normal;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
         }
 
-        /* Pudełko na cytat - styl neobrutalistyczny */
-        .quote-box {
-            background-color: #00ffff; /* Cyjan */
-            padding: 30px;
-            border: 4px solid #000;
+        /* Sekcja cytatu */
+        .quote-container {
             max-width: 600px;
-            box-shadow: 12px 12px 0px #ff00ff; /* Cień w kolorze fuksji */
-            text-align: center;
+            margin: 0 auto;
         }
 
         blockquote {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 0 15px 0;
-            line-height: 1.4;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #555555;
+            margin: 0;
+            line-height: 1.6;
         }
 
         .author {
-            font-size: 1.2rem;
-            text-align: right;
-            font-style: italic;
+            display: block;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Czysty font bezszeryfowy dla kontrastu */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #888888;
         }
 
-        /* Stopka - Czarna, dla kontrastu */
-        footer {
-            background-color: #000000;
-            color: #ccff00;
-            text-align: center;
-            padding: 15px;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-
-        /* Prosta animacja emotikona */
-        @keyframes pulse {
-            0% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(10deg); }
-            100% { transform: scale(1) rotate(0deg); }
+        /* Zdjęcie architektoniczne na dole */
+        .architecture-image {
+            width: 100%;
+            max-width: 800px;
+            height: 35vh; /* Zajmuje około 35% wysokości ekranu */
+            object-fit: cover; /* Gwarantuje, że zdjęcie ładnie wypełni ramy bez zniekształceń */
+            filter: grayscale(20%) contrast(110%); /* Delikatne wygaszenie kolorów dla elegancji */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Bardzo miękki, elegancki cień */
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Stefan Stefanowicz</h1>
-    </header>
-
-    <main>
-        <div class="emoji">🤪</div>
+    <div class="border-frame">
         
-        <div class="quote-box">
-            <blockquote>
-                "Oszalałem, prawda?<br>
-                Zupełnie, na amen. Ale powiem ci w sekrecie: tylko wariaci są coś warci."
-            </blockquote>
-            <div class="author">— Lewis Carroll, <i>Alicja w Krainie Czarów</i></div>
+        <div class="center-content">
+            <h1>Agnieszka Giegiel</h1>
+            
+            <div class="quote-container">
+                <blockquote>
+                    „Mniej znaczy więcej.”
+                </blockquote>
+                <span class="author">— Ludwig Mies van der Rohe</span>
+            </div>
         </div>
-    </main>
 
-    <footer>
-        © 2026 Stefan Stefanowicz | Zaprojektowane z kontrolowanym chaosem.
-    </footer>
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Elegancki budynek architektoniczny" class="architecture-image">
+        
+    </div>
 
 </body>
 </html>
